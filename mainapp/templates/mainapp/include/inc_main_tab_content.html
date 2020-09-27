@@ -1,0 +1,13 @@
+{% load static %}
+{% for item in products %}
+<div class="block">
+    <a href="{{ item.image_href }}"><img src="{% static "img/product-2.jpg" %}" alt="{{ item.alt }}">
+		<div class="text">
+            <img src="{% static "img/icon-hover.png" %}" alt="{{ item.alt }}">
+            <h4>{{ item.name }}</h4>
+            <p>{{ item.short_desc }} </p>
+            <p>категория товара: {{ item.category }}</p>
+        </div>
+    </a>
+</div>
+{% endfor %}

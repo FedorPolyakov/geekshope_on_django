@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -24,13 +25,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/geekshop" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\mainapp\json_files" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static\css" />
@@ -98,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600367156877</updated>
       <workItem from="1600707606663" duration="13182000" />
+      <workItem from="1600969403817" duration="20362000" />
     </task>
     <servers />
   </component>
@@ -108,25 +113,25 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600891483861">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601146848260">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600891483861" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1601146848260" />
     <state x="509" y="91" width="632" height="498" key="EnvironmentVariablesDialog" timestamp="1600891244552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="509" y="91" width="632" height="498" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600891244552" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1600891324401">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1601146815655">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600891324401" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601146815655" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1600891328920">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600891328920" />
-    <state x="303" y="1" key="search.everywhere.popup" timestamp="1600893653645">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601148811457">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600893653645" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601148811457" />
   </component>
 </project>
