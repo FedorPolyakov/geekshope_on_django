@@ -34,4 +34,16 @@
             вход
         </a>
     {% endif %}
+    <a  href="{% url 'basket:basket' %}"  class=" {% if request.resolver_match.url_name == 'basket' %}active {% endif %}" >
+        {% if basket %} корзинок: {{ basket|length }}{% endif %}
+    </a>
+    <a  href="{% url 'basket:basket' %}"  class=" {% if request.resolver_match.url_name == 'basket' %}active {% endif %}" >
+        {% if basket %} Кол-во товара = {{ basket_q }}, на сумму = {{  total_price }} {% endif %}
+    </a>
 </ul>
+
+
+
+
+
+

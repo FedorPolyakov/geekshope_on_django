@@ -27,3 +27,18 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.name} ({self.category.name})'
+
+
+class Locations(models.Model):
+    city = models.CharField(max_length=60, verbose_name='город')
+    phone = models.CharField(max_length=20, verbose_name='телефон')
+    email = models.CharField(max_length=60, verbose_name='эл.почта')
+    address = models.CharField(max_length=60, verbose_name='адрес')
+
+    class Meta:
+        verbose_name = 'контакт'
+        verbose_name_plural = 'контакты'
+
+    def __str__(self):
+        return f'{self.city} - {self.address}'
+

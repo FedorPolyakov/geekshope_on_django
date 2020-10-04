@@ -6,12 +6,12 @@ from django.contrib.auth.models import User
 from django.core.management import BaseCommand
 
 from authapp.models import ShopUser
-from mainapp.models import ProductCategory, Product
+from mainapp.models import ProductCategory, Product, Locations
 
 FILE_PATH = os.path.join(settings.BASE_DIR, 'mainapp/json')
 
 def load_from_json(file_name):
-    with open(os.path.join(FILE_PATH, file_name + ".json"), encoding='UTF-8') as json_file:
+    with open(os.path.join(FILE_PATH, file_name + ".json"), 'r', encoding='UTF-8') as json_file:
         return json.load(json_file)
 
 class Command(BaseCommand):
@@ -32,5 +32,11 @@ class Command(BaseCommand):
             _cat = ProductCategory.objects.get(name=cat_name)
             product['category'] = _cat
             Product.objects.create(**product)
+
+        locations = load_from_json("contact__locations")
+        Locations.objects.all().delete()
+        for location in locations:
+            Locations.objects.create(**location)
+
 
         ShopUser.objects.create_superuser(username='django', password='geekbrains', age=30)
