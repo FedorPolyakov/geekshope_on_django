@@ -72,13 +72,3 @@ class ShopUserEditForm(UserChangeForm):
         if data < 18:
             raise forms.ValidationError("Вы слишком молоды")
         return data
-
-    def clean_email(self):
-        data = self.cleaned_data['email']
-        users = ShopUser.objects.all()
-        uniqueEmails = set()
-        for user in users:
-            uniqueEmails.add(user.__dict__['email'])
-        if data in uniqueEmails:
-            raise forms.ValidationError("Эта почта уже используется. Укажите другую")
-        return data

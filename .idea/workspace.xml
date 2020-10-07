@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -115,7 +115,8 @@
       <workItem from="1601311210136" duration="6775000" />
       <workItem from="1601404284190" duration="16119000" />
       <workItem from="1601570908615" duration="2336000" />
-      <workItem from="1601746189174" duration="19250000" />
+      <workItem from="1601746189174" duration="19938000" />
+      <workItem from="1601915967226" duration="23050000" />
     </task>
     <servers />
   </component>
@@ -126,6 +127,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="267" y="19" key="#Inspections" timestamp="1602100902574">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="267" y="19" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1602100902574" />
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601146848260">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
