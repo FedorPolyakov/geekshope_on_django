@@ -44,6 +44,7 @@
 				<div class="description">
 					<h3 class="big-bold">{{ hot_product.name|title }}</h3>
 					<h3 class="red">горячее предложение</h3>
+                    <h3 class="red">{{ hot_product.category.name }}</h3>
 					<p class="price"> {{ hot_product.price|floatformat:1 }} <span>руб</span></p>
 					<a href="{% url 'basket:add' hot_product.pk %}" class="red-button">
 						заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>

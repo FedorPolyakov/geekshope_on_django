@@ -39,14 +39,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\adminapp\templates\adminapp" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\mainapp\json_files" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
     </key>
   </component>
   <component name="RunManager">
@@ -116,7 +117,8 @@
       <workItem from="1601404284190" duration="16119000" />
       <workItem from="1601570908615" duration="2336000" />
       <workItem from="1601746189174" duration="19938000" />
-      <workItem from="1601915967226" duration="23050000" />
+      <workItem from="1601915967226" duration="31973000" />
+      <workItem from="1602340706932" duration="31393000" />
     </task>
     <servers />
   </component>
@@ -135,6 +137,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1601146848260" />
+    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602350491223">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1602350491223" />
     <state x="509" y="91" width="632" height="498" key="EnvironmentVariablesDialog" timestamp="1600891244552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -147,9 +153,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601320291655" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601829813646">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602435591401">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601829813646" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602435591401" />
   </component>
 </project>

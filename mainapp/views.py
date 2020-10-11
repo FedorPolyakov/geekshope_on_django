@@ -8,11 +8,11 @@ from basketapp.models import Basket
 from mainapp.models import Product, ProductCategory, Locations
 
 def get_hot_product():
-    product_list = Product.objects.all()
+    product_list = Product.objects.all().exclude(category__is_active=False).exclude(is_active=False)
     return random.sample(list(product_list), 1)[0]
 
 def get_same_products(hot_product):
-    same_products = Product.objects.filter(category_id=hot_product.category_id).exclude(pk=hot_product.pk)[:3]
+    same_products = Product.objects.filter(category_id=hot_product.category_id).exclude(pk=hot_product.pk).exclude(is_active=False)[:3]
     return same_products
 
 def get_basket(user):
@@ -21,7 +21,7 @@ def get_basket(user):
     return []
 
 def main(request):
-    products_list = Product.objects.all()[:4]
+    products_list = Product.objects.all().exclude(is_active=False)[:4]
     content = {
         'title': 'главная',
         'products': products_list,
@@ -42,15 +42,15 @@ def contact(request):
 
 def products(request, category_pk=None):
     title = 'продукты'
-    links_menu = ProductCategory.objects.all()
+    links_menu = ProductCategory.objects.all().exclude(is_active=False)
 
     if category_pk is not None:
         if category_pk == 0:
-            products_items = Product.objects.all()
+            products_items = Product.objects.all().exclude(is_active=False)
             category = {'name': 'все'}
         else:
             category = get_object_or_404(ProductCategory, pk=category_pk)
-            products_items = Product.objects.filter(category=category).order_by('-price')
+            products_items = Product.objects.filter(category=category).order_by('-price').exclude(is_active=False)
 
         content = {
             'title': title,
