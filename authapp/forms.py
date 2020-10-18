@@ -26,6 +26,7 @@ class ShopUserRegisterForm(UserCreationForm):
         super(ShopUserRegisterForm, self).__init__(*args, **kwargs)
         for filed_name, field in self.fields.items():
             field.widget.attrs['class'] = "form-control"
+            field.help_text = ''
 
 
     def clean_age(self):
@@ -40,7 +41,7 @@ class ShopUserRegisterForm(UserCreationForm):
         uniqueEmails = set()
         for user in users:
             uniqueEmails.add(user.__dict__['email'])
-        if data in uniqueEmails:
+        if data in uniqueEmails and data !='':
             raise forms.ValidationError("Эта почта уже используется. Укажите другую")
         return data
 

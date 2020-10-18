@@ -1,35 +1,56 @@
 {% extends 'adminapp/base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block content %}
   <div class="products_list">
-      <div class="product_record">
-        <img
-          src="/media/{{product.image|default:'products_images/default.jpg'}}"
-          alt="{{ product.name }}">
+      <div class="product_read">
         <div class="product_name">
-          {{ product.name|title }}
+            Продукт<strong>{{ object.category.name|title }} /
+                     {{ object.name|title }}</strong>
         </div>
+          <img src="{{ product.image|media_folder_products }}" alt="{{ object.name }}">
         <div class="summary">
-          <b>категория</b>
-          <p>{{ category.name }}</p>
           <b>цена</b>
-          <p>{{ product.price }} руб</p>
+          <p>{{ object.price }} руб</p>
           <b>количество</b>
-          <p>{{ product.quantity }}</p>
+          <p>{{ object.quantity }}</p>
+          <b>в каталоге</b>
+          <p>{% if object.is_active %}да{% else %}нет{% endif %}</p>
+          <p>
+            <button>
+              <a href={% url 'admin:product_update' object.pk %}>
+                редактировать
+              </a>
+            </button>
+          </p>
+          <p>
+            <button>
+              <a href={% url 'admin:product_delete' object.pk %}>
+                удалить
+              </a>
+            </button>
+          </p>
+          <p>
+            <button>
+              <a href={% url 'admin:products' object.category.pk %}>
+                назад
+              </a>
+            </button>
+          </p>
+
         </div>
         <div class="product_desc">
           <b>описание</b>
-          <p>{{ product.description|title }}</p>
-        </div>
-        <div class="product_desc">
+          <p>{{ object.description|title }}</p>
+            <br>
           <b>краткое описание</b>
-          <p>{{ product.short_desc|title }} </p>
+          <p>{{ object.short_desc|title }} </p>
         </div>
       </div>
   </div>
     <button class="btn btn-round form-control last">
-        <a href="{% url 'adminapp:products' category.pk%} ">
+        <a href="{% url 'adminapp:products' object.category.pk %} ">
         к списку товаров категории
         </a>
     </button>
