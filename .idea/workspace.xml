@@ -13,12 +13,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="JupyterTrust" id="265dcad7-89cc-4595-bc80-774253e060a1" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="15" />
+    <option name="y" value="30" />
+    <option name="width" value="1890" />
+    <option name="height" value="930" />
+  </component>
   <component name="ProjectId" id="1hpUbUPAFWlYORK00fgLXgIZblC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,8 +35,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/geekshop" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/products_images" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -38,6 +44,9 @@
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,6 +112,8 @@
       <updated>1600367156877</updated>
       <workItem from="1600707606663" duration="13182000" />
       <workItem from="1600969403817" duration="20362000" />
+      <workItem from="1601311210136" duration="6775000" />
+      <workItem from="1601404284190" duration="15301000" />
     </task>
     <servers />
   </component>
@@ -125,13 +136,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601146815655" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1600891328920">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1601320291655">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600891328920" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601148811457">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601320291655" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601495877132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601148811457" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601495877132" />
   </component>
 </project>
