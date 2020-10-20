@@ -25,7 +25,8 @@
             <div class="category-products clearfix">
 
                 {% for product in products %}
-                    <div class="block">
+                    {% if product.category.is_active %}
+                        <div class="block">
                          <a href="{% url 'products:product' product.pk %}">
                             <img src="/media/{{ product.image }}" alt="product">
                             <div class="text">
@@ -35,6 +36,7 @@
                             </div>
                         </a>
                     </div>
+                    {% endif %}
                 {% endfor %}
 
             </div>

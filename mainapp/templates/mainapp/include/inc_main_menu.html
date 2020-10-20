@@ -21,10 +21,15 @@
             {% if user.first_name %}
                 Привет, {{ user.first_name }}!
             {% else %}
-                Пользователь
+                Привет, Пользователь
             {% endif %}
         </a>
     </li>
+    {% if user.is_superuser %}
+        <li>
+            <a href="{% url 'admin:users' %}">админка</a>
+        </li>
+    {% endif %}
     <li>
         <a  href="{% url 'auth:logout' %}">
             выход
@@ -35,6 +40,7 @@
             вход
         </a>
     {% endif %}
+
 
 </ul>
 <a href="#" class="search"></a>

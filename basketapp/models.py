@@ -10,6 +10,13 @@ class Basket(models.Model):
     quantity = models.PositiveIntegerField(default=0, verbose_name='количество')
     add_date_time = models.DateTimeField(auto_now_add=True, verbose_name='время добавления')
 
+    class Meta:
+        verbose_name = 'корзинка'
+        verbose_name_plural = 'корзинки'
+
+    def __str__(self):
+        return f'{self.product.name} ({self.quantity})'
+
     @property
     def product_cost(self):
         return self.product.price * self.quantity

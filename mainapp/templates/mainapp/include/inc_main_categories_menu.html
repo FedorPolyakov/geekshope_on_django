@@ -8,12 +8,10 @@
             все
         </a></li>
     {% for item in links_menu %}
-        <li><a
-                href="{% url 'products:category' item.pk %}"
-                class="{% if request.resolver_match.kwargs.category_pk == item.pk %}
-                        active
-                        {% endif %}">
-            {{ item.name }}
-        </a></li>
+        {% if item.is_active %}
+            <li><a  href="{% url 'products:category' item.pk %}"
+                    class="{% if request.resolver_match.kwargs.category_pk == item.pk %}active{% endif %}">
+                {{ item.name }}</a></li>
+        {% endif %}
     {% endfor %}
 </ul>

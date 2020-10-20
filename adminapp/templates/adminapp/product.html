@@ -1,0 +1,36 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="products_list">
+      <div class="product_record">
+        <img
+          src="/media/{{product.image|default:'products_images/default.jpg'}}"
+          alt="{{ product.name }}">
+        <div class="product_name">
+          {{ product.name|title }}
+        </div>
+        <div class="summary">
+          <b>категория</b>
+          <p>{{ category.name }}</p>
+          <b>цена</b>
+          <p>{{ product.price }} руб</p>
+          <b>количество</b>
+          <p>{{ product.quantity }}</p>
+        </div>
+        <div class="product_desc">
+          <b>описание</b>
+          <p>{{ product.description|title }}</p>
+        </div>
+        <div class="product_desc">
+          <b>краткое описание</b>
+          <p>{{ product.short_desc|title }} </p>
+        </div>
+      </div>
+  </div>
+    <button class="btn btn-round form-control last">
+        <a href="{% url 'adminapp:products' category.pk%} ">
+        к списку товаров категории
+        </a>
+    </button>
+{% endblock %}
