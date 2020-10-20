@@ -27,8 +27,8 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.name} ({self.category.name})'
-
-
+      
+      
 class Locations(models.Model):
     city = models.CharField(max_length=60, verbose_name='город')
     phone = models.CharField(max_length=20, verbose_name='телефон')
@@ -41,4 +41,3 @@ class Locations(models.Model):
 
     def __str__(self):
         return f'{self.city} - {self.address}'
-

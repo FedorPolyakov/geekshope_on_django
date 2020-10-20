@@ -29,7 +29,6 @@ def main(request):
     }
     return render(request, 'mainapp/index.html', content)
 
-
 def contact(request):
     locations = Locations.objects.all()
     content = {
@@ -73,8 +72,7 @@ def products(request, category_pk=None):
     }
     return render(request, 'mainapp/products.html', content)
 
-
-
+  
 def product(request, pk):
     product_item = get_object_or_404(Product, pk=pk)
     title = product_item.name
@@ -87,3 +85,16 @@ def product(request, pk):
     }
 
     return render(request,'mainapp/product.html', content)
+#old code
+# image_src = "product-1.jpg"
+# image_href = "/product/2/"
+# with open(os.path.join(settings.BASE_DIR, 'mainapp/json_files/links_menu.json'), encoding='UTF-8') as json_file:
+#     json_data = json_file.read()
+#     links_menu = json.loads(json_data)
+# with open(os.path.join(settings.BASE_DIR, 'mainapp/json_files/tab_contents.json'), encoding='UTF-8') as json_file:
+#     json_data = json_file.read()
+#     tab_contents = json.loads(json_data)
+# with open(os.path.join(settings.BASE_DIR, 'mainapp/json/contact_locations.json'), encoding='UTF-8') as json_file:
+#     json_data = json_file.read()
+#     locations = json.loads(json_data)
+

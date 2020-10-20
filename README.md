@@ -1,1 +1,2 @@
-# geekshope_on_django
+geekbrains University
+Проект интернет-магазина на примере магазина мебели
