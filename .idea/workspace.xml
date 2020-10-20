@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -113,7 +113,9 @@
       <workItem from="1600707606663" duration="13182000" />
       <workItem from="1600969403817" duration="20362000" />
       <workItem from="1601311210136" duration="6775000" />
-      <workItem from="1601404284190" duration="15301000" />
+      <workItem from="1601404284190" duration="16119000" />
+      <workItem from="1601570908615" duration="2336000" />
+      <workItem from="1601746189174" duration="19250000" />
     </task>
     <servers />
   </component>
@@ -140,9 +142,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601320291655" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601495877132">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1601829813646">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601495877132" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1601829813646" />
   </component>
 </project>

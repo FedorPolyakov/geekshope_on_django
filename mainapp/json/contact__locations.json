@@ -1,20 +1,5 @@
 [
-  {
-    "phone": "+7-888-888-8888",
-    "email": "info@geekshop.ru",
-    "city": "Москва",
-    "address": "В пределах МКАД"
-  },
-  {
-    "phone": "+7-777-777-7777",
-    "email": "info_yekaterinburg@geekshop.ru",
-    "city": "Екатеринбург",
-    "address": "Близко к центру"
-  },
-  {
-    "phone": "+7-999-999-9999",
-    "email": "info_vladivostok@geekshop.ru",
-    "city": "Владивосток",
-    "address": "Близко к океану"
-  }
+  {"city": "москва","phone": "+7 999 333 99 22","email": "moscow@geekshop.ru","address": "рядом с центром"},
+  {"city": "санкт-петербург","phone": "+7 498 993 33 22","email": "stpeterburg@geekshop.ru","address": "рядом с рекой"},
+  {"city": "минск","phone": "+7 433 001 25 56","email": "minsk@geekshop.ru","address": "рядом с картошкой"}
 ]

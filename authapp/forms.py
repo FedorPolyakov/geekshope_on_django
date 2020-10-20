@@ -50,7 +50,7 @@ class ShopUserRegisterForm(UserCreationForm):
         if not match:
             raise forms.ValidationError("Пароль должен содержать минимум 8 символов, а так же состоять только из букв, цифр и знака подчеркивани _")
         return data
-    
+
 
 
 class ShopUserEditForm(UserChangeForm):
