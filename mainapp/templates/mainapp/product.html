@@ -20,21 +20,21 @@
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product">
-						<img src="/media/{{ hot_product.image }}">
+						<img src="/media/{{ product.image }}">
 					</div>
 					<div class="slider-control">
 						<div class="block">
-							<a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+							<a href="#"><img src="/media/{{ product.image }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+							<a href="#"><img src="/media/{{ product.image }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+							<a href="#"><img src="/media/{{ product.image }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
@@ -42,14 +42,14 @@
 				</div>
 
 				<div class="description">
-					<h3 class="big-bold">{{ hot_product.name|title }}</h3>
-					<h3 class="red">горячее предложение</h3>
-					<p class="price"> {{ hot_product.price|floatformat:1 }} <span>руб</span></p>
-					<a href="{% url 'basket:add' hot_product.pk %}" class="red-button">
+					<h3 class="big-bold">Название: {{ product.name|title }}</h3>
+					<h3 class="red">Категория: {{ product.category.name }}</h3>
+					<p class="price"> {{ product.price|floatformat:1 }} <span>руб</span></p>
+					<a href="{% url 'basket:add' product.pk %}" class="red-button">
 						заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
 					</a>
 					<div class="description-text">
-						{{ hot_product.description }}
+						{{ product.description }}
 					</div>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 			<div class="related">
 				<div class="title clearfix">
 					<h2>Похожие продукты</h2>
-					<a class="explore" href="#">показать все <img src="{% static "img/arrow.png" %}" alt=""></a>
+					<a class="explore" href="{% url 'products:category' product.category.pk %}">показать все <img src="{% static "img/arrow.png" %}" alt=""></a>
 				</div>
                 {% include 'mainapp/include/inc_same_products.html' %}
 			</div>

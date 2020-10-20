@@ -1,13 +1,16 @@
 {% load static %}
 {% for item in products %}
 <div class="block">
-    <a href="{{ item.image_href }}"><img src="{% static "img/product-2.jpg" %}" alt="{{ item.alt }}">
+    <a href="{% url 'products:product' item.pk %}"><img src="/media/{{ item.image }}" alt="{{ item.short_desc }}">
 		<div class="text">
-            <img src="{% static "img/icon-hover.png" %}" alt="{{ item.alt }}">
-            <h4>{{ item.name }}</h4>
-            <p>{{ item.short_desc }} </p>
-            <p>категория товара: {{ item.category }}</p>
+            <img src="{% static "img/icon-hover.png" %}" alt="img">
+            <h3>Категория товара: {{ item.category.name }}</h3>
+            <h4>Название: {{ item.name }}</h4>
+            <p>Описание: {{ item.description }} </p>
+            <p>Цена: {{ item.price }}</p>
+            <p>Количество: {{ item.quantity }}</p>
         </div>
     </a>
 </div>
 {% endfor %}
+{#{{ item.image_href }}#}

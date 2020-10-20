@@ -1,3 +1,5 @@
+import random
+
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404
 import json, os, django
@@ -5,12 +7,25 @@ import json, os, django
 from basketapp.models import Basket
 from mainapp.models import Product, ProductCategory, Locations
 
+def get_hot_product():
+    product_list = Product.objects.all()
+    return random.sample(list(product_list), 1)[0]
+
+def get_same_products(hot_product):
+    same_products = Product.objects.filter(category_id=hot_product.category_id).exclude(pk=hot_product.pk)[:3]
+    return same_products
+
+def get_basket(user):
+    if user.is_authenticated:
+        return Basket.objects.filter(user=user)
+    return []
+
 def main(request):
     products_list = Product.objects.all()[:4]
     content = {
         'title': 'главная',
-        # 'tabs'  : tab_contents,
         'products': products_list,
+        'basket': get_basket(request.user),
     }
     return render(request, 'mainapp/index.html', content)
 
@@ -18,7 +33,8 @@ def contact(request):
     locations = Locations.objects.all()
     content = {
         'title' : 'контакты',
-        'locations' : locations
+        'locations' : locations,
+        'basket': get_basket(request.user),
     }
     return render(request, 'mainapp/contact.html', content)
 
@@ -26,13 +42,6 @@ def contact(request):
 def products(request, category_pk=None):
     title = 'продукты'
     links_menu = ProductCategory.objects.all()
-
-    basket = Basket.objects.filter(user=request.user) #то что надо
-    basket_q = sum(list(Basket.objects.filter(user_id=1).values_list('quantity', flat=True)))
-    basket_prod_id = list(Basket.objects.filter(user=request.user).values_list('product_id', flat=True))
-    product_prices_all = sum(list(Product.objects.filter(id__in=basket_prod_id).values_list('price', flat=True)))
-    total_price = int(basket_q)*int(product_prices_all)
-
 
     if category_pk is not None:
         if category_pk == 0:
@@ -47,20 +56,35 @@ def products(request, category_pk=None):
             'links_menu': links_menu,
             'category': category,
             'products': products_items,
-            'basket': basket,
-            'basket_q': basket_q,
-            'total_price': total_price,
+            'basket': get_basket(request.user),
         }
         return render(request, 'mainapp/products_list.html', content)
+
+    hot_product = get_hot_product()
+    same_products = get_same_products(hot_product)
 
     content = {
         'title' : title,
         'links_menu' : links_menu,
-        'basket': basket,
-        'basket_q': basket_q,
-        'total_price': total_price,
+        'basket': get_basket(request.user),
+        'hot_product': hot_product,
+        'same_products': same_products
     }
     return render(request, 'mainapp/products.html', content)
+
+  
+def product(request, pk):
+    product_item = get_object_or_404(Product, pk=pk)
+    title = product_item.name
+    content = {
+        'title': title,
+        'product': product_item,
+        'basket': get_basket(request.user),
+        'links_menu': ProductCategory.objects.all(),
+        'same_products': get_same_products(product_item)
+    }
+
+    return render(request,'mainapp/product.html', content)
 #old code
 # image_src = "product-1.jpg"
 # image_href = "/product/2/"
@@ -73,3 +97,4 @@ def products(request, category_pk=None):
 # with open(os.path.join(settings.BASE_DIR, 'mainapp/json/contact_locations.json'), encoding='UTF-8') as json_file:
 #     json_data = json_file.read()
 #     locations = json.loads(json_data)
+
