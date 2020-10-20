@@ -14,7 +14,6 @@ def main(request):
     }
     return render(request, 'mainapp/index.html', content)
 
-
 def contact(request):
     locations = Locations.objects.all()
     content = {
@@ -62,7 +61,6 @@ def products(request, category_pk=None):
         'total_price': total_price,
     }
     return render(request, 'mainapp/products.html', content)
-
 #old code
 # image_src = "product-1.jpg"
 # image_href = "/product/2/"
