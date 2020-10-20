@@ -1,5 +1,6 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block menu %}
 		<div class="hero-white">
@@ -20,21 +21,21 @@
 			<div class="details-products">
 				<div class="details-slider">
 					<div class="slider-product">
-						<img src="/media/{{ product.image }}">
+						<img src="{{ product.image|media_folder_products }}">
 					</div>
 					<div class="slider-control">
 						<div class="block">
-							<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<a href="#"><img src="{{ product.image|media_folder_products }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<a href="#"><img src="{{ product.image|media_folder_products }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>
 						<div class="block">
-							<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<a href="#"><img src="{{ product.image|media_folder_products }}" alt="">
 								<div class="text"></div>
 							</a>
 						</div>

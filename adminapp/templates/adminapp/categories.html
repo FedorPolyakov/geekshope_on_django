@@ -8,8 +8,18 @@
         новая категория
       </a>
     </button>
-
-    {% for object in objects %}
+    <div class="paginator">
+        {% if page_obj.has_previous %}
+            <a href="{% url 'admin:cpage' page_obj.previous_page_number %}"> < </a>
+        {% endif %}
+        <span class="current">
+            страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+        </span>
+        {% if page_obj.has_next %}
+            <a href="{% url 'admin:cpage' page_obj.next_page_number %}"> > </a>
+        {% endif %}
+    </div>
+    {% for object in object_list %}
       <div class="category_record
         {% if not object.is_active %}
             not_active
