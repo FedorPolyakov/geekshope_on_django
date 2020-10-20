@@ -21,7 +21,6 @@ def main(request):
     return render(request, 'mainapp/index.html', content)
 
 def contact(request):
-
     with open(os.path.join(settings.BASE_DIR, 'mainapp/json_files/locations.json'), encoding='UTF-8') as json_file:
         json_data = json_file.read()
         locations = json.loads(json_data)
@@ -43,4 +42,3 @@ def products(request, category_pk=None):
         'links_menu' : links_menu
     }
     return render(request, 'mainapp/products.html', content)
-
