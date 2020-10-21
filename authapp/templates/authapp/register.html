@@ -10,6 +10,7 @@
             <br>
             <input class="form-control" type="submit" value="Регистрация">
         </form>
-
+        <p class="{% if not success_mail %} hidden {% endif %}">Для подтверждения перейдите по ссылке</p>
+        <p class="{% if not success_mail %} hidden {% else %} btn-link{% endif %}">{{ success_mail }}</p>
         <a class="btn btn-link" href="{% url 'auth:login' %}">вход</a>
 {% endblock %}

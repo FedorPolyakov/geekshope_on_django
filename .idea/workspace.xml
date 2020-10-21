@@ -19,12 +19,6 @@
     </option>
   </component>
   <component name="JupyterTrust" id="265dcad7-89cc-4595-bc80-774253e060a1" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
-    <option name="height" value="930" />
-  </component>
   <component name="ProjectId" id="1hpUbUPAFWlYORK00fgLXgIZblC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,19 +29,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/products_images" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Django_3" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\adminapp\templates\adminapp" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\mainapp\json_files" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\Django_3" />
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,12 +118,16 @@
       <workItem from="1602602696016" duration="2761000" />
       <workItem from="1602605504194" duration="7680000" />
       <workItem from="1602704013196" duration="15287000" />
-      <workItem from="1603020356692" duration="1939000" />
+      <workItem from="1603020356692" duration="2613000" />
+      <workItem from="1603128888015" duration="17053000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -138,10 +137,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="267" y="19" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1602100902574" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602529653948">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603129753817">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602529653948" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603129753817" />
     <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602350491223">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -150,14 +149,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="509" y="91" width="632" height="498" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600891244552" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1601146815655">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1603294675041">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601146815655" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1602605478272">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603294675041" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1603134678743">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602605478272" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603134678743" />
     <state x="0" y="0" width="981" height="524" key="dock-window-1" timestamp="1602688980400">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

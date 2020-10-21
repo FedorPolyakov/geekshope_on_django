@@ -4,6 +4,7 @@
         <div class="h2 text-center head">
                     Аутентификация
         </div>
+
         <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
             {% csrf_token %}
             {% if next %}
@@ -14,6 +15,6 @@
             <input class="form-control" type="submit" value="Вход">
         </form>
 
-        <a class="btn btn-link" href="{% url 'auth:register' %}">регистрация</a>
+        <a class="btn form-control" href="{% url 'auth:register' %}">Регистрация</a>
         <a class="btn btn-link" href="{% url 'main' %}">на главную</a>
 {% endblock %}
