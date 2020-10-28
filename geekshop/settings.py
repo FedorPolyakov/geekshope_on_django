@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'basketapp',
     'adminapp',
     'social_django',
+    'orderapp',
 ]
 
 MIDDLEWARE = [
@@ -181,10 +182,12 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.associate_user',
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
+    # 'social_core',
 )
 #GOOGLE
 SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
-SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile','https://www.googleapis.com/auth/user.gender.read', 'https://www.googleapis.com/auth/user.birthday.read']
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile', 'https://www.googleapis.com/auth/user.gender.read', 'https://www.googleapis.com/auth/user.birthday.read', ]
+SOCIAL_AUTH_GOOGLE_OAUTH2_USE_DEPRECATED_API = True
 
 with open('geekshop/json/google_plus.json', 'r') as f:
     GOOGLE_PLUS = json.load(f)

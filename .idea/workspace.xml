@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,16 +33,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\Django_3" />
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\geekshop\json" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\geekshop" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\adminapp\templates\adminapp" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop\mainapp\json_files" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\Django_3" />
-      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
     </key>
   </component>
   <component name="RunManager">
@@ -121,7 +121,8 @@
       <workItem from="1603020356692" duration="2613000" />
       <workItem from="1603128888015" duration="17053000" />
       <workItem from="1603544909558" duration="11450000" />
-      <workItem from="1603634411561" duration="16332000" />
+      <workItem from="1603634411561" duration="43665000" />
+      <workItem from="1603911353618" duration="9412000" />
     </task>
     <servers />
   </component>
@@ -163,9 +164,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="981" height="524" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1602688980400" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603547566609">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603832681036">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603547566609" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603832681036" />
   </component>
 </project>

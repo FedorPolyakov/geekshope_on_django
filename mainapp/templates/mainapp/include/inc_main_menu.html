@@ -17,32 +17,44 @@
     </li>
     {% if user.is_authenticated %}
     <li>
-        <a  href="{% url 'auth:edit' %}">
-            {% if user.first_name %}
-                Привет, {{ user.first_name }}!
-            {% else %}
-                Привет, Пользователь
-            {% endif %}
-        </a>
+        <div class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                {{ user.first_name|default:'Пользователь' }}
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="{% url 'auth:edit' %}">
+                        Профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'order:orders_list' %}">
+                        Заказы
+                    </a>
+                </li>
+            </ul>
+        </div>
     </li>
     {% if user.is_superuser %}
         <li>
             <a href="{% url 'admin:users' %}">админка</a>
         </li>
     {% endif %}
-    <li>
-        <a  href="{% url 'auth:logout' %}">
-            выход
-        </a>
-    </li>
+        <li>
+            <a  href="{% url 'auth:logout' %}">
+                выход
+            </a>
+        </li>
     {% else %}
-        <a  href="{% url 'auth:login' %}">
+        <li>
+            <a  href="{% url 'auth:login' %}">
             вход
-        </a>
+            </a>
+        </li>
     {% endif %}
-
-
 </ul>
+
 <a href="#" class="search"></a>
 <a href="{% url 'basket:basket' %}" class="basket">
     <span >
