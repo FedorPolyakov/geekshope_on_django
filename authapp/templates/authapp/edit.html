@@ -1,5 +1,6 @@
 {% extends 'authapp/base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block content %}
 
@@ -9,6 +10,7 @@
     <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ edit_form.as_p }}
+        {{ profile_form.as_p }}
         <br>
         <input class="form-control" type="submit" value="Сохранить">
     </form>
@@ -17,7 +19,8 @@
     </button>
 
     {% if user.avatar %}
-        <div class="user_avatar"><img src="/media/{{ user.avatar }}" alt=""></div>
+        <div class="user_avatar">
+            <img src="{{ user.avatar|media_folder_users }}" alt=""></div>
     {% else %}
         <div class="user_avatar"><p>нет аватарки =(</p></div>
     {% endif %}
