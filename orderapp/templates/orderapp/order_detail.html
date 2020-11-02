@@ -10,9 +10,9 @@
                 <img style="width: 100px; height: 100px" src="{{ item.product.image|media_folder_products }}" alt="{{ item.product.short_desc}}">
                 <span class="category_name">{{ item.product.category.name }}</span>
                 <span class="product_name">{{ item.product.name }}</span>
-                <span class="product_price">{{ item.product.price}}</span>
-                <span class="product_quantitiy">{{ item.quantity}}</span>
-                <span class="product_cost">{{ item.get_product_cost }}</span>
+                <span class="product_price">{{ item.product.price}} руб</span>
+                <span class="product_quantitiy">х{{ item.quantity}}шт.</span>
+                <span class="product_cost">={{ item.get_product_cost }} руб</span>
             </div>
         {% endfor %}
     </div>

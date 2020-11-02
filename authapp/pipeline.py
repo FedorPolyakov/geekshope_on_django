@@ -71,9 +71,12 @@ def save_user_profile(backend, user, response, *args, **kwargs):
         # print(response['scope'][0])
         if response['picture']:
             get_avatar = requests.get(response['picture'])
+            print(settings.BASE_DIR)
             with open(f'{settings.BASE_DIR}/media/users_avatars/{user.id}.jpg', 'wb') as photo:
                 photo.write(get_avatar.content)
             user.avatar = f'users_avatars/{user.id}.jpg'
+    elif backend.name == 'github':
+        print(response)
     else:
         return
 
