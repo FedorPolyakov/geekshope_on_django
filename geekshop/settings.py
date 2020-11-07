@@ -94,8 +94,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'geekshop',
-        'USER': 'django',
-        'PASSWORD': 'geekbrains',
+        'USER': 'postgres',
+ #       'PASSWORD': 'geekbrains',
     }
 }
 
@@ -203,6 +203,7 @@ with open('geekshop/json/google_plus.json', 'r') as f:
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_PLUS['SOCIAL_AUTH_GOOGLE_OAUTH2_KEY']
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_PLUS['SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET']
 
+
 #GITHUB
 SOCIAL_AUTH_GITHUB_IGNORE_DEFAULT_SCOPE = True
 SOCIAL_AUTH_GITHUB_SCOPE = ['user:email', 'read:user']
@@ -212,4 +213,3 @@ with open('geekshop/json/github.json', 'r') as f:
 
 SOCIAL_AUTH_GITHUB_KEY = GITHUB['SOCIAL_AUTH_GITHUB_KEY']
 SOCIAL_AUTH_GITHUB_SECRET = GITHUB['SOCIAL_AUTH_GITHUB_SECRET']
-
