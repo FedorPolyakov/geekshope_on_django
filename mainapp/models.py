@@ -28,11 +28,12 @@ class Product(models.Model):
         verbose_name_plural = 'товары'
 
     def __str__(self):
-        return f'{self.name} ({self.category.name})
+        return f'{self.name} ({self.category.name})'
 
     @staticmethod
     def get_items():
         return Product.objects.filter(is_active=True).order_by('category', 'name')
+
 
 class Locations(models.Model):
     city = models.CharField(max_length=60, verbose_name='город')
@@ -46,3 +47,4 @@ class Locations(models.Model):
 
     def __str__(self):
         return f'{self.city} - {self.address}'
+
