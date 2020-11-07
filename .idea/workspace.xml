@@ -13,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -24,16 +25,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/geekshop" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Django_3" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\Django_3" />
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\media\products_images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\geekshop\json" />
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\geekshop" />
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\adminapp\templates\adminapp" />
+      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\mainapp\json_files" />
       <recent name="C:\Users\Fedor\PycharmProjects\geekshop" />
-      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static" />
-      <recent name="C:\Users\Fedor\PycharmProjects\geekshop\static\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -69,7 +78,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="geekshop.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Fedor\PycharmProjects\geekshop\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Fedor\PycharmProjects\geekshop\Django_3.1.1\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -98,35 +107,66 @@
       <option name="presentableId" value="Default" />
       <updated>1600367156877</updated>
       <workItem from="1600707606663" duration="13182000" />
+      <workItem from="1600969403817" duration="20362000" />
+      <workItem from="1601311210136" duration="6775000" />
+      <workItem from="1601404284190" duration="16119000" />
+      <workItem from="1601570908615" duration="2336000" />
+      <workItem from="1601746189174" duration="19938000" />
+      <workItem from="1601915967226" duration="31973000" />
+      <workItem from="1602340706932" duration="32024000" />
+      <workItem from="1602520903003" duration="4383000" />
+      <workItem from="1602602696016" duration="2761000" />
+      <workItem from="1602605504194" duration="7680000" />
+      <workItem from="1602704013196" duration="15287000" />
+      <workItem from="1603020356692" duration="2613000" />
+      <workItem from="1603128888015" duration="17053000" />
+      <workItem from="1603544909558" duration="11450000" />
+      <workItem from="1603634411561" duration="43665000" />
+      <workItem from="1603911353618" duration="46316000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600891483861">
+    <state x="267" y="19" key="#Inspections" timestamp="1602100902574">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600891483861" />
+    <state x="267" y="19" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1602100902574" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603997828813">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603997828813" />
+    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602350491223">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1602350491223" />
     <state x="509" y="91" width="632" height="498" key="EnvironmentVariablesDialog" timestamp="1600891244552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="509" y="91" width="632" height="498" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600891244552" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1600891324401">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1603294675041">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600891324401" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1600891328920">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603294675041" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1603648934012">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600891328920" />
-    <state x="303" y="1" key="search.everywhere.popup" timestamp="1600893653645">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603648934012" />
+    <state x="0" y="0" width="981" height="524" key="dock-window-1" timestamp="1602688980400">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600893653645" />
+    <state x="0" y="0" width="981" height="524" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1602688980400" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604262750330">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604262750330" />
   </component>
 </project>
