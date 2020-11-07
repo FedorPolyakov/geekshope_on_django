@@ -3,6 +3,7 @@ from datetime import datetime
 from urllib.parse import urlencode, urlunparse
 
 import requests
+from django.conf import settings
 from django.utils import timezone
 from social_core.exceptions import AuthForbidden
 
@@ -22,11 +23,12 @@ def save_user_profile(backend, user, response, *args, **kwargs):
                               ))
 
         resp = requests.get(api_url)
+        print(resp.content)
         if resp.status_code != 200:
             return
 
         data = resp.json()['response'][0]
-
+        print(data)
         if data['sex']:
             user.shopuserprofile.gender = ShopUserProfile.MALE if data['sex'] == 2 else ShopUserProfile.FEMALE
 
@@ -42,15 +44,36 @@ def save_user_profile(backend, user, response, *args, **kwargs):
             user.age = age
 
         if data['photo_200']:
-            avatar_url = data['photo_200']
-            user.avatar = avatar_url
+            get_avatar = requests.get(data['photo_200'])
+            with open(f'{settings.BASE_DIR}/media/users_avatars/{user.id}.jpg', 'wb') as photo:
+                photo.write(get_avatar.content)
+            # avatar_url = data['photo_200']
+            # user.avatar = avatar_url
+            user.avatar = f'users_avatars/{user.id}.jpg'
+
     elif backend.name == 'google-oauth2':
-        # if response['user.birthday.read']:
-        #     print(response['user.birthday.read'])
-        # print(response)
+        # api_url = urlunparse(('https',
+        #                       'www.googleapis.com',
+        #                       '/auth/user.birthday.read',
+        #                       None,
+        #                       urlencode(OrderedDict(fields=','.join(('date')),
+        #                                             access_token=response['access_token'],
+        #                                             v='1')),
+        #                       None
+        #                       ))
+        #
+        # resp = requests.get(api_url)
+        # data = resp.json()['response']
+        # print('resp', '-----',resp)
+        # print(data)
+        # print(response['openid'])
+        print(response)
+        # print(response['scope'][0])
         if response['picture']:
-            user.avatar = response['picture']
-            # print(response['picture'])
+            get_avatar = requests.get(response['picture'])
+            with open(f'{settings.BASE_DIR}/media/users_avatars/{user.id}.jpg', 'wb') as photo:
+                photo.write(get_avatar.content)
+            user.avatar = f'users_avatars/{user.id}.jpg'
     else:
         return
 

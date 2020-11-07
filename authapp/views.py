@@ -103,7 +103,6 @@ def edit(request):
             edit_form.save()
             return HttpResponseRedirect(reverse('auth:edit'))
     else:
-        print(request.user)
         edit_form = ShopUserEditForm(instance=request.user)
         profile_form = ShopUserProfileEditForm(instance=request.user.shopuserprofile)
 

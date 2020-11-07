@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
+from django.views.generic import DetailView
 
 from adminapp.forms import ShopUserAdminEditForm, ProductCategoryEditForm, ProductEditForm
 from authapp.forms import ShopUserRegisterForm
@@ -15,6 +16,40 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 #-------------------CBV----------------------------------------------------
 #--------------------------users------------------------------------------#
+from orderapp.models import Order
+
+def change_order_status(request, user_pk, order_pk, status_pk):
+    order = get_object_or_404(Order, pk=order_pk)
+    if status_pk == 'FM':
+        order.status = Order.FORMING
+    elif status_pk == 'STP':
+        order.status = Order.SENT_TO_PROCEED
+    elif status_pk == 'PRD':
+        order.status = Order.PROCEEDED
+    elif status_pk == 'PD':
+        order.status = Order.PAID
+    elif status_pk == 'RDY':
+        order.status = Order.READY
+    elif status_pk == 'DN':
+        order.status = Order.DONE
+    else:
+        order.status = Order.CANCEL
+    order.save()
+    return HttpResponseRedirect(reverse('adminapp:user_orders', args=user_pk))
+
+class UserOrderListView(ListView):
+    model = ShopUser
+    template_name = 'adminapp/order.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = get_object_or_404(ShopUser, id=self.kwargs.get('pk'))
+        statuses = list(map(list, Order.ORDER_STATUSES))
+        context['object_list'] = Order.objects.filter(user=self.kwargs.get('pk'))
+        context['user'] = user
+        context['order_status'] = statuses
+        return context
+
 class UserListView(ListView):
     model = ShopUser
     template_name = 'adminapp/users.html'
@@ -36,6 +71,7 @@ class UserCreateView(CreateView):
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
 
+
 class UserUpdateView(UpdateView):
     model = ShopUser
     template_name = 'adminapp/user_update.html'
@@ -45,6 +81,11 @@ class UserUpdateView(UpdateView):
     @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(UserUpdateView, self).get_context_data(**kwargs)
+        print(self.request.__dict__)
+        return context
 
 class UserDeleteView(DeleteView):
     model = ShopUser
@@ -64,6 +105,7 @@ class UserDeleteView(DeleteView):
         self.object.save()
 
         return HttpResponseRedirect(self.get_success_url())
+
 
 #--------------------------categories--------------------------------------#
 class ProductCategoryListView(ListView):
@@ -127,7 +169,7 @@ class ProductCategoryDeleteView(DeleteView):
         return HttpResponseRedirect(self.get_success_url())
 
 #-------------------------products-----------------------------------------
-class ProductDetailView(DeleteView):
+class ProductDetailView(DetailView):
     model = Product
     template_name = 'adminapp/product.html'
 
@@ -234,6 +276,7 @@ class ProductDeleteView(DeleteView):
         return HttpResponseRedirect(self.get_success_url())
 
 #--------------------FBV----------------------------------------------------
+'''
 @user_passes_test(lambda u: u.is_superuser)
 def user_create(request):
     title = 'пользователь / создание'
@@ -485,4 +528,4 @@ def product_delete(request, pk):
         'title': title,
         'product_to_delete': product_item,
     }
-    return render(request, 'adminapp/product_delete.html', content)
+    return render(request, 'adminapp/product_delete.html', content)'''

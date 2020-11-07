@@ -21,6 +21,10 @@ class Basket(models.Model):
     def product_cost(self):
         return self.product.price * self.quantity
 
+    @staticmethod
+    def get_items(user):
+        return Basket.objects.filter(user=user).order_by('product__category')
+
     @property
     def total_quantity(self):
         _items = Basket.objects.filter(user=self.user)

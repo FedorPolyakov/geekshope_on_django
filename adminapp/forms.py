@@ -34,3 +34,5 @@ class ProductEditForm(forms.ModelForm):
         for filed_name, field in self.fields.items():
             field.widget.attrs['class'] = "form-control"
             field.help_text = ''
+
+

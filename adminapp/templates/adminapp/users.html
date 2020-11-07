@@ -45,6 +45,11 @@
               {% if object.is_active %}удалить{% else %}восстановить{% endif %}
             </a>
           </button>
+          <button>
+             <a href={% url 'admin:user_orders' object.pk %}>
+               Заказы
+             </a>
+           </button>
         </div>
         <div class="user_name">
           <p><strong>{{ object.username }}</strong></p>
