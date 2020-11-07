@@ -1,0 +1,22 @@
+(django3) root@151-248-116-3:/var/www/html/geekshope_on_django# history
+   18  ssh-keygen
+   19  cat /root/.ssh/
+   20  ls /root/.ssh/
+   21  cat /root/.ssh/id_rsa.pub
+   22  cd /var/www/html/geekshope_on_django/
+   23  source django3/bin/activate
+   24* mcedit /etc/nginx/sites-available/geekshop
+   25  ln -s /etc/nginx/sites-available/ /etc/nginx/sites-enabled/
+   26  ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled/
+   27  nginx -t
+   28  systemctl restart nginx
+   29  ды
+   30  ls
+   31  systemctl restart nginx
+   32  systemctl status nginx
+   33  systemctl status gunicorn
+   34  systemctl restart gunicorn
+   35  systemctl status gunicorn
+   36  systemctl status gunicornmc
+   37  systemctl restart gunicorn
+   38  systemctl status gunicorn
