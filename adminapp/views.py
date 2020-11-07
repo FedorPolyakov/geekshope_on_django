@@ -35,10 +35,10 @@ def change_order_status(request, user_pk, order_pk, status_pk):
     else:
         order.status = Order.CANCEL
     order.save()
-    return HttpResponseRedirect(reverse('adminapp:user_orders', args=user_pk))
+    return HttpResponseRedirect(reverse('adminapp:user_orders', args=[int(user_pk)]))
 
 class UserOrderListView(ListView):
-    model = ShopUser
+    model = Order
     template_name = 'adminapp/order.html'
 
     def get_context_data(self, **kwargs):

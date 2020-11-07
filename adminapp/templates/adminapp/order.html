@@ -12,6 +12,8 @@
            <th>Создан</th>
            <th>Обновлен</th>
            <th>Статус</th>
+           <th>Редактировать заказ</th>
+           <th>Изменить статус заказа</th>
          </tr>
        </thead>
        <tbody>
@@ -23,29 +25,21 @@
                    <td>{{ item.updated|date:"Y-m-d H:i:s" }}</td>
                    <td>{{ item.get_status_display }}</td>
                    <td>
-                       <a href="{% url 'orderapp:order_read' item.pk %}">
-                           посмотреть
-                       </a>
-                   </td>
-                   <td>
                        <a href="{% url 'order:order_update' item.pk %}">
                            редактировать
                        </a>
                    </td>
                    <td>
-                       <a href="{% url 'orderapp:order_delete' item.pk %}">
-                           удалить
-                       </a>
-                   </td>
-                   <td>
-                        <h4>изменить статус заказа</h4>
-                       {% for status in order_status %}
-                           <li>
-                               <a href="{% url 'admin:change_status' user.pk item.pk status.0 %}">
-                                   {{ status.1 }}
-                               </a>
-                           </li>
-                       {% endfor %}
+                       <div class="dropdown_mine">
+                           <button class="dropbtn_mine">Выбрать статус</button>
+                           <div class="dropdown-content_mine">
+                               {% for status in order_status %}
+                                       <a href="{% url 'admin:change_status' user.pk item.pk status.0 %}">
+                                           {{ status.1 }}
+                                       </a>
+                           {% endfor %}
+                           </div>
+                       </div>
                    </td>
                </tr>
                {% endif %}

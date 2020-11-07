@@ -11,7 +11,7 @@ urlpatterns = [
     path('users/read/<page>/', adminapp.UserListView.as_view(), name='page'),
     path('users/delete/<int:pk>/', adminapp.UserDeleteView.as_view(), name='user_delete'),
     path('users/orders/<int:pk>/', adminapp.UserOrderListView.as_view(), name='user_orders'),
-    path('users/order/<user_pk>/<order_pk>/<status_pk>/', adminapp.change_order_status, name='change_status'),
+    path('users/order/<user_pk>/<int:order_pk>/<status_pk>/', adminapp.change_order_status, name='change_status'),
 
 
 
