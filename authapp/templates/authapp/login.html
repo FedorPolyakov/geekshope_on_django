@@ -25,5 +25,8 @@
         <button class="btn btn-round form-control">
             <a class="" href="{% url 'social:begin' 'google-oauth2' %}?next=/">Войти через Google</a>
         </button>
+        <button class="btn btn-round form-control">
+            <a class="" href="{% url 'social:begin' 'github' %}?next=/">Войти через Github</a>
+        </button>
         <a class="btn btn-link" href="{% url 'main' %}">на главную</a>
 {% endblock %}

@@ -26,7 +26,7 @@ SECRET_KEY = '=t+2px&^s595o%)gd7a)@f3iz*g&dy&4pr@y*_wz8tvhm301w0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -160,6 +160,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.vk.VKOAuth2',
     'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.github.GithubOAuth2',
 )
 #VK
 SOCIAL_AUTH_VK_OAUTH2_IGNORE_DEFAULT_SCOPE = True
@@ -194,4 +195,14 @@ with open('geekshop/json/google_plus.json', 'r') as f:
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_PLUS['SOCIAL_AUTH_GOOGLE_OAUTH2_KEY']
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_PLUS['SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET']
+
+#GITHUB
+SOCIAL_AUTH_GITHUB_IGNORE_DEFAULT_SCOPE = True
+SOCIAL_AUTH_GITHUB_SCOPE = ['user:email', 'read:user']
+
+with open('geekshop/json/github.json', 'r') as f:
+    GITHUB = json.load(f)
+
+SOCIAL_AUTH_GITHUB_KEY = GITHUB['SOCIAL_AUTH_GITHUB_KEY']
+SOCIAL_AUTH_GITHUB_SECRET = GITHUB['SOCIAL_AUTH_GITHUB_SECRET']
 

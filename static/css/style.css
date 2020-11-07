@@ -507,11 +507,6 @@ html, body {
     float: left;
 }
 
-.basket_record img {
-    width: 30px;
-    height: 30px;
-}
-
 .basket_list button {
     margin-left: 45px;
     width: 150px;
@@ -760,7 +755,7 @@ html, body {
 	position: absolute;
 	top: 63px;
 	/*left: 1176px;*/
-	left: 1151px;
+	left: 951px;
 }
 .basket {
 	display: block;
@@ -770,7 +765,7 @@ html, body {
 	position: absolute;
 	top: 63px;
 	/*left: 1210px;*/
-	left: 1185px;
+	left: 985px;
     text-decoration: none;
     color: #555;
 }
