@@ -36,3 +36,4 @@ update==0.0.1
 uritemplate==3.0.1
 urllib3==1.25.11
 wrapt==1.12.1
+wheel==0.35.1
