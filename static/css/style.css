@@ -755,7 +755,8 @@ html, body {
 	position: absolute;
 	top: 63px;
 	/*left: 1176px;*/
-	left: 951px;
+	/*left: 951px;*/
+    left: 1151px;
 }
 .basket {
 	display: block;
@@ -765,7 +766,8 @@ html, body {
 	position: absolute;
 	top: 63px;
 	/*left: 1210px;*/
-	left: 985px;
+	/*left: 985px;*/
+    left: 1185px;
     text-decoration: none;
     color: #555;
 }
