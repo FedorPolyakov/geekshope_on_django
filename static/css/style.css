@@ -350,7 +350,9 @@ html, body {
 .user_record {
     height: 125px;
     margin: 15px auto;
-    position: relative;
+    /*position: relative;*/
+    float: left;
+    width: 1113px;
 }
 
 .user_record.not_active {
@@ -1252,10 +1254,13 @@ html, body {
     color: #6c6c6c;
 }
 .text-footer {
-	margin-top: 120px;
-	width: 221px;
+	margin-top: 60px;
+	/*margin-top: 120px;*/
+	/*width: 221px;*/
+	width: 210px;
 	float: left;
-	margin-right: 68px;
+	/*margin-right: 68px;*/
+    margin-right: 60px;
 }
 .text-footer:last-child {
 	margin-right: 0;
@@ -1302,10 +1307,12 @@ td:first-child {
 }
 
 .text-footer:nth-child(2) {
-	width: 422px;
+	width: 310px;
+	/*width: 422px;*/
 }
 .text-footer:nth-child(3) {
-	width: 363px;
+	width: 332px;
+	/*width: 363px;*/
 }
 .text-footer input {
 	border-width: 1px;
@@ -1400,7 +1407,8 @@ td:first-child {
 }
 
 .location {
-	padding: 0px 97px;
+	padding: 0px 88px;
+	/*padding: 0px 97px;*/
 }
 .location-1 {
 	height: 368px;
