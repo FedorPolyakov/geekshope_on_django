@@ -14,7 +14,7 @@
 {% else %}
    <div class="h2">Новый заказ</div>
    <hr>
-   <div class="h4">заказчик: {{ user.last_name }} {{ user.first_name }} </div>
+   <div class="h4">заказчик: {% if user.first_name %}{{ user.last_name }} {{ user.first_name }}{% else %}Пользователь{% endif %}</div>
    {% if basket.0 %}
        <div class="h4">
            общее количество товаров: <span class="order_total_quantity">{{ basket.0.total_quantity }}</span>
