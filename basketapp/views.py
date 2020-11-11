@@ -11,7 +11,7 @@ from mainapp.models import Product
 @login_required
 def basket(request):
     content = {
-        'basket': Basket.objects.filter(user=request.user)
+        'basket': Basket.objects.filter(user=request.user).select_related()
     }
     return render(request, 'basketapp/basket.html', content)
 
