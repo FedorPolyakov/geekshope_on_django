@@ -11,7 +11,7 @@ from mainapp.models import ProductCategory, Product, Locations
 FILE_PATH = os.path.join(settings.BASE_DIR, 'mainapp/json')
 
 def load_from_json(file_name):
-    with open(os.path.join(FILE_PATH, file_name + ".json"), 'r', encoding='UTF-8') as json_file:
+    with open(os.path.join(FILE_PATH, file_name + ".json"), 'r', errors='ignore', encoding='UTF-8') as json_file:
         return json.load(json_file)
 
 class Command(BaseCommand):
