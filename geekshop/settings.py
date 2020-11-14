@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -245,3 +245,20 @@ with open('geekshop/json/github.json', 'r') as f:
 
 SOCIAL_AUTH_GITHUB_KEY = GITHUB['SOCIAL_AUTH_GITHUB_KEY']
 SOCIAL_AUTH_GITHUB_SECRET = GITHUB['SOCIAL_AUTH_GITHUB_SECRET']
+
+
+
+#CACHE
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 120
+CACHE_MIDDLEWARE_KEY_PREFIX = 'geekshop'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:112111'
+        # 'LOCATION': '127.0.0.1:65535'
+    }
+}
+
+LOW_CACHE = True
