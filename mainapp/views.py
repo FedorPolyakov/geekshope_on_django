@@ -90,8 +90,8 @@ def get_same_products(hot_product):
 
 
 def main(request):
-    products_list = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:4]
-    #products_list = get_products()[:4]
+    #products_list = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:4]
+    products_list = get_products()[:4]
     content = {
         'title': 'главная',
         'products': products_list,
@@ -115,14 +115,14 @@ def products(request, category_pk=None, page=1):
 
     if category_pk is not None:
         if category_pk == 0:
-            products_items = Product.objects.filter(is_active=True, category__is_active=True)
-            #products_items = get_product_ordered_by_price()
+            #products_items = Product.objects.filter(is_active=True, category__is_active=True)
+            products_items = get_product_ordered_by_price()
             category = {'pk': '0', 'name': 'все'}
         else:
             # category = get_object_or_404(ProductCategory, pk=category_pk)
             category = get_category(category_pk)
-            products_items = Product.objects.filter(category=category, is_active=True, category__is_active=True).select_related('category').order_by('-price')
-            #products_items = get_product_in_category_ordered_by_price(category_pk)
+            #products_items = Product.objects.filter(category=category, is_active=True, category__is_active=True).select_related('category').order_by('-price')
+            products_items = get_product_in_category_ordered_by_price(category_pk)
         paginator = Paginator(products_items, 3)
         try:
             products_paginator = paginator.page(page)
@@ -153,8 +153,8 @@ def products(request, category_pk=None, page=1):
 
 
 def product(request, pk):
-    product_item = get_object_or_404(Product, pk=pk)
-    #product_item = get_product(pk)
+    #product_item = get_object_or_404(Product, pk=pk)
+    product_item = get_product(pk)
     title = product_item.name
     # links_menu = ProductCategory.objects.filter(is_active=True)
     links_menu = get_links_menu()
