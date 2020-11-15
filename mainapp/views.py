@@ -1,7 +1,7 @@
 import random
 
 # from django.conf import settings
-from django.views.decorators.cache import cache_page
+from django.views.decorators.cache import cache_page, never_cache
 
 from geekshop import settings
 from django.core.cache import cache
@@ -100,7 +100,8 @@ def main(request):
     }
     return render(request, 'mainapp/index.html', content)
 
-@cache_page(3600)
+#@cache_page(3600)
+@never_cache
 def contact(request):
     locations = Locations.objects.all()
     content = {
@@ -110,7 +111,8 @@ def contact(request):
     return render(request, 'mainapp/contact.html', content)
 
 
-@cache_page(3600)
+# @cache_page(3600)
+@never_cache
 def products(request, category_pk=None, page=1):
     title = 'продукты'
     # links_menu = ProductCategory.objects.filter(is_active=True)
@@ -154,7 +156,8 @@ def products(request, category_pk=None, page=1):
     return render(request, 'mainapp/products.html', content)
 
 
-@cache_page(3600)
+# @cache_page(3600)
+@never_cache
 def product(request, pk):
     #product_item = get_object_or_404(Product, pk=pk)
     product_item = get_product(pk)
