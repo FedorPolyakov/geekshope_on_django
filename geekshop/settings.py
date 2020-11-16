@@ -125,8 +125,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'geekshop',
-        'USER': 'postgres',
- #       'PASSWORD': 'geekbrains',
+        #'USER': 'postgres',
+        'USER': 'django',
+        'PASSWORD': 'geekbrains',
     }
 }
 
