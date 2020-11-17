@@ -84,7 +84,15 @@ def get_product_in_category_ordered_by_price(pk):
 def get_hot_product():
     #product_list = Product.objects.filter(category__is_active=True, is_active=True).select_related('category')
     product_list = get_products()
-    return random.sample(list(product_list), 1)[0]
+    if product_list:
+        return random.sample(list(product_list), 1)[0]
+    else:
+        # если бд пустая и нет ни категорий ни продуктов, до делаем тестовые кат + прод
+        test_category = ProductCategory.objects.create(name='Test category')
+        test_category.save()
+        test_product = Product.objects.create(category=test_category, name='test_product', price=200)
+        test_product.save()
+        return test_product
 
 def get_same_products(hot_product):
     same_products = Product.objects.filter(category_id=hot_product.category_id, is_active=True, category__is_active=True).exclude(pk=hot_product.pk).select_related('category')[:3]

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class ProductCategory(models.Model):
     name = models.CharField(max_length=64, unique=True, verbose_name='название категории')
     description = models.TextField(blank=True, verbose_name='описание категории')
@@ -47,4 +48,3 @@ class Locations(models.Model):
 
     def __str__(self):
         return f'{self.city} - {self.address}'
-

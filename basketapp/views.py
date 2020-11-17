@@ -1,4 +1,6 @@
 from django.contrib.auth.decorators import login_required
+from django.db import connection
+from django.db.models import F
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
@@ -21,15 +23,19 @@ def basket_add(request, pk):  #pk - product_pk
     if 'login' in request.META.get('HTTP_REFERER'):
         return HttpResponseRedirect(reverse('products:product', args=[pk]))
 
-    product_item = get_object_or_404(Product, pk=pk)
+    product = get_object_or_404(Product, pk=pk)
+    old_basket_item = Basket.get_product(user=request.user, product=product)
+    if old_basket_item:
+        # old_basket_item[0].quantity += 1
+        old_basket_item[0].quantity = F('quantity') + 1
+        old_basket_item[0].save()
 
-    basket_item = Basket.objects.filter(product=product_item, user=request.user).first()
-
-    if not basket_item:
-        basket_item = Basket.objects.create(product=product_item, user=request.user)
-
-    basket_item.quantity += 1
-    basket_item.save()
+        update_queries = list(filter(lambda x: 'UPDATE' in x['sql'], connection.queries))
+        print(f'query basket_add: {update_queries}')
+    else:
+        new_basket_item = Basket(user=request.user, product=product)
+        new_basket_item.quantity += 1
+        new_basket_item.save()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
