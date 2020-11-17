@@ -1,0 +1,54 @@
+{% extends 'orderapp/base.html' %}
+{% load static %}
+
+{% block content %}
+   <div class="h2 text-center head">
+       Заказы пользователя {{ user.first_name|title}}
+   </div>
+   <table class="table orders_list">
+       <thead>
+         <tr>
+           <th>ID</th>
+           <th>Создан</th>
+           <th>Обновлен</th>
+           <th>Статус</th>
+           <th>Редактировать заказ</th>
+           <th>Изменить статус заказа</th>
+         </tr>
+       </thead>
+       <tbody>
+           {% for item in object_list %}
+               {% if item.is_active %}
+               <tr>
+                   <td class="td1 orders_list">{{ item.pk }}</td>
+                   <td>{{ item.created|date:"Y-m-d H:i:s" }}</td>
+                   <td>{{ item.updated|date:"Y-m-d H:i:s" }}</td>
+                   <td>{{ item.get_status_display }}</td>
+                   <td>
+                       <a href="{% url 'order:order_update' item.pk %}">
+                           редактировать
+                       </a>
+                   </td>
+                   <td>
+                       <div class="dropdown_mine">
+                           <button class="dropbtn_mine">Выбрать статус</button>
+                           <div class="dropdown-content_mine">
+                               {% for status in order_status %}
+                                       <a href="{% url 'admin:change_status' user.pk item.pk status.0 %}">
+                                           {{ status.1 }}
+                                       </a>
+                           {% endfor %}
+                           </div>
+                       </div>
+                   </td>
+               </tr>
+               {% endif %}
+           {% endfor %}
+       </tbody>
+   </table>
+   <button class="btn btn-default btn-round">
+       <a href="{% url 'admin:users' %}">
+           обратно
+       </a>
+   </button>
+{% endblock %}
